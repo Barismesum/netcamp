@@ -28,6 +28,6 @@ public class AuthorizationBehavior<TRequest, TResponse> : IPipelineBehavior<TReq
         if (isNotMatchedARoleClaimWithRequestRoles) throw new AuthorizationException("You are not authorized.");
 
         TResponse response = await next();
-        return response; //
+        return response; 
     }
 }
